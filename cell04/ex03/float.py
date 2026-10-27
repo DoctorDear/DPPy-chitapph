@@ -1,4 +1,4 @@
-
+#!/usr/bin/python3
 
 num = float(input("Give me a number: "))
 

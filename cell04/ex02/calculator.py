@@ -12,8 +12,10 @@ result = [
     ("+", firstNum + secondNum), #tuple of operator and result
     ("-", firstNum - secondNum),
     ("/", int(firstNum / secondNum)),
-    ("*", firstNum * secondNum)
+    ("*", firstNum * secondNum) 
 ]
-
+print(result[3])
 for operator, value in result:
+    print(operator)
+    print(value)
     print(f"{firstNum} {operator} {secondNum} = {value}")
