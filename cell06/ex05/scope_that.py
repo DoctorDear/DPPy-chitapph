@@ -1,4 +1,4 @@
-#/usr/bin/env python3
+#!/usr/bin/python3
 
 def add_one(x):
     x += 1
@@ -10,6 +10,6 @@ def main():
     add_one(my_var)
     print(my_var)
     my_var = add_one(my_var) #reassigning the return value of add_one to my_var
-    
+    print(my_var)
 main()
     

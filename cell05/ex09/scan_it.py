@@ -16,6 +16,7 @@ if len(sys.argv) == 3:
     if not searched:
         print("none")
     else:
+        print(searched)
         print(len(searched))
 else:
     print("none")
