@@ -2,7 +2,7 @@
 
 def famous_births(scientists):
     sorted_scientists = sorted(scientists.values(), key=get_birth_year)
-
+    print(sorted_scientists)
     for scientist in sorted_scientists:
         print(f"{scientist['name']} is a great scientist born in {scientist['date_of_birth']}.")
 
