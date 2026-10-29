@@ -2,11 +2,12 @@
 
 
 def find_the_redheads(family):
-    list(filter(check_redheads ,family.items()))
-    
+    redheads = filter(check_redheads ,family.items())
+    redheads = dict(redheads)
+    redheads = list(redheads)
+    return redheads
 
 def check_redheads(member):
-    print(member)
     name, hair_color = member
     return hair_color == "red"
 
@@ -18,4 +19,4 @@ dupont_family = {
 "franck": "red"
 }
 
-find_the_redheads(dupont_family)
+print(find_the_redheads(dupont_family))
