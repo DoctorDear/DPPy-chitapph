@@ -2,10 +2,13 @@
 
 
 def find_the_redheads(family):
-familyArr = []
+    list(filter(check_redheads ,family.items()))
+    
 
-
-
+def check_redheads(member):
+    print(member)
+    name, hair_color = member
+    return hair_color == "red"
 
 dupont_family = {
 "florian": "red",
@@ -14,3 +17,5 @@ dupont_family = {
 "david": "red",
 "franck": "red"
 }
+
+find_the_redheads(dupont_family)
