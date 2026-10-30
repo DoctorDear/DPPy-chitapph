@@ -2,7 +2,7 @@
 import json
 import os
 import random
-import sys
+import subprocess
 
 
 def save_words(words, path):
@@ -102,12 +102,14 @@ def delete_word(words):
 
 
 def clear_screen():
-    if not sys.stdout.isatty():
-        return
-    if os.name == "nt":
-        os.system("cls")
-    elif os.environ.get("TERM") not in (None, "", "dumb"):
-        os.system("clear")
+    # if not sys.stdout.isatty():
+    #     return
+    # if os.name == "nt":
+    #     os.system("cls")
+    # elif os.environ.get("TERM") not in (None, "", "dumb"):
+    #     os.system("clear")
+    command = "cls" if os.name == "nt" else "clear"
+    subprocess.run([command], check=False)
 
 
 def draw_hangman(mistakes):
